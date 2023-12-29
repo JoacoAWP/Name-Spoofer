@@ -104,7 +104,7 @@ public class NameHandler implements ICommand {
         	String realName = profile.getName();
         	String fakeName = String.join(" ", args);
         	targets.put(realName, fakeName); 
-        	ChatUtils.printChat("&7Your name has been set to &d" + fakeName + "&7.");
+        	
         } else {
 	       
 	        String[] subarray = new String[args.length - 1];
@@ -112,7 +112,7 @@ public class NameHandler implements ICommand {
 	        String fakeName = String.join(" ", subarray);
 	        target = args[0];
 	        targets.put(target, fakeName); 
-	        ChatUtils.printChat("&d" + StringUtils.swapCase(target) + "&7 has been set to &d" + fakeName + "&7.");
+	        
         }
         try {
 			String jsonSave = new ObjectMapper().writeValueAsString(targets);
